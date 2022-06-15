@@ -1,0 +1,2 @@
+--- #Optional YAML start syntax
+- import_tasks: update-system.yml

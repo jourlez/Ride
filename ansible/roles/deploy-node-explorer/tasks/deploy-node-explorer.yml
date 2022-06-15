@@ -1,0 +1,17 @@
+--- #Optional YAML start syntax
+- name: Run a private node image as docker cointainer
+  docker_container:
+    name: node
+    image: wavesplatform/waves-private-node
+    ports: "6869:6869"
+    state: started
+    
+- name: Run a waves explorer image as docker cointainer
+  docker_container:    
+    name: explorer
+    image: wavesplatform/explorer
+    ports: "3000:8080"
+    state: started
+    env: 
+      API_NODE_URL: http://localhost:6869
+      NODE_LIST: http://localhost:6869

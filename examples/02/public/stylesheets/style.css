@@ -1,0 +1,99 @@
+body#admin, html{
+  height: 100%;
+}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+body#admin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+a {
+  color: #00B7FF;
+}
+#admin{
+  background-color: #f8f8f8;
+}
+#admin form input,
+#admin form select{
+  margin-bottom: 15px;
+  width: 100%;
+}
+#admin form label{
+  display: block;
+  margin-bottom: 10px;
+}
+#admin p{
+  margin-bottom: 0.5rem;
+}
+#admin .wrap_top{
+  border: solid 1px #e1e1e1;
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
+}
+#previousInfo{
+  display: none;
+}
+.navbar{
+  padding: 15px 10px;
+}
+.navbar .navbar-brand{
+  font-size: 16px;
+}
+.navbar .collapse .form-control,
+.navbar .collapse .btn{
+  height: auto;
+}
+button.btn{
+  background-color: #6a8dd1;
+  color: white;
+  transition: background .4s ease;
+}
+button.btn:hover{
+  color:white;
+  background-color: #226c83;
+}
+footer{
+  font-size: 13px;
+  line-height: 16px;
+}
+thead{
+  background-color: #6a8dd1;
+  color: white;
+}
+.btn-primary{
+  background: #6a8dd1;
+  border:none;
+}
+.accordion>.card>.card-header,
+.accordion>.card>.card-header button.btn {
+  background-color: #6a8dd1;
+  color: white;
+}
+.accordion>.card>.card-header h2{
+  font-size: initial;
+}
+.accordion>.card>.card-header button.btn:hover{
+  background-color: #446199;
+}
+#accordionWrapper{
+  display: none;
+}
+tr,td{
+  text-align: center;
+}
+.wrap_chart{
+  position: relative;
+}
+@media(max-width:992px){
+  body {
+    padding: 35px 0px 15px 0px;
+  }
+  #admin .btn-primary.w-50 {
+    width: 75% !important;
+  }
+}

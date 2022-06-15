@@ -1,0 +1,19 @@
+--- #Optional YAML start syntax
+pip_install_packages:
+  - name: docker
+  - name: gitpython
+  - name: sphinx
+  - name: sphinx_rtd_theme
+  - name: sphinx-rtd-dark-mode
+  - name: sphinx_copybutton
+  - name: rinohtype
+  - name: sphinx-intl
+nodejs_version: "16.x"
+nodejs_npm_global_packages:
+  - name: "@decentralchain/surfboard"
+  - name: http-server-node
+users:
+  - username: "{{ lookup('env','USER') }}"
+    visual_studio_code_extensions:
+      - wavesplatform.waves-ride
+      - wavesafrica.waves-ride-snippets

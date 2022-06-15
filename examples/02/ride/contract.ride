@@ -1,0 +1,9 @@
+{-# STDLIB_VERSION 5 #-}
+{-# CONTENT_TYPE DAPP #-}
+{-# SCRIPT_TYPE ACCOUNT #-}
+
+@Callable(i)
+func addUpdateEntry(entry: String, description: String) = {
+    let ownerAddress = i.caller.toString()
+    ([StringEntry(ownerAddress + "_entry", entry), StringEntry(ownerAddress + "_description", description)], unit)
+}

@@ -1,0 +1,11 @@
+# https://galaxy.ansible.com/gantsign/visual-studio-code
+- src: gantsign.visual-studio-code
+
+# https://galaxy.ansible.com/geerlingguy/docker
+- src: geerlingguy.docker
+
+# https://galaxy.ansible.com/geerlingguy/nodejs
+- src: geerlingguy.nodejs
+
+# https://galaxy.ansible.com/geerlingguy/pip
+- src: geerlingguy.pip
