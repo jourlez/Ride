@@ -8,9 +8,7 @@ import Getdata from "./getdata";
 let getdata = new Getdata();
 
 // INIT AND CONFIGURE WAVES SIGNER
-let signer = new Signer({
-  NODE_URL: getdata.nodeUrl,
-}); 
+let signer = new Signer({NODE_URL: getdata.nodeUrl,}); 
 let provider = new ProviderWeb(getdata.providerUrl);
 signer.setProvider(provider);
 

@@ -2,14 +2,14 @@
 - name: Run a private node image as docker cointainer
   docker_container:
     name: node
-    image: wavesplatform/waves-private-node
+    image: "runitcr/dcc:latest"
     ports: "6869:6869"
     state: started
     
-- name: Run a waves explorer image as docker cointainer
+- name: Run a blockchain explorer image as docker cointainer
   docker_container:    
     name: explorer
-    image: wavesplatform/explorer
+    image: "blockchaincostarica/explorer:3.3.0"
     ports: "3000:8080"
     state: started
     env: 

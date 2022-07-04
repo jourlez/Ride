@@ -6,9 +6,9 @@
   vars_files:
     - group_vars/all.yml
   roles:
-    - update-system
-    - gantsign.visual-studio-code
-    - geerlingguy.pip
-    - geerlingguy.docker
-    - geerlingguy.nodejs
+    #- update-system
+    #- gantsign.visual-studio-code
+    #- geerlingguy.pip
+    #- geerlingguy.docker
+    #- geerlingguy.nodejs
     - deploy-node-explorer
