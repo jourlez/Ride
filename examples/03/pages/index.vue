@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        Nuxt3 + Decentralchain
+        Decentralchain + Nuxt3
       </h1>
       <h2 class="subtitle">
         Demo project for Decentralchain Signer Authentication
@@ -22,47 +22,38 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref } from 'vue'
 import { Signer } from '@decentralchain/signer'
 import { ProviderWeb } from '@waves.exchange/provider-web'
-import Logo from '~/components/Logo.vue'
 const signer = new Signer({
   NODE_URL: 'https://mainnet-node.decentralchain.io'
 })
 const provider = new ProviderWeb('https://testnet.waves.exchange/signer/')
 signer.setProvider(provider)
 
-export default {
-  components: {
-    Logo
-  },
-  data() {
-    return {
-      loginButtonText: 'Login',
-      isAuthenticated: false
-    }
-  },
-  methods: {
-    async callSigner() {
-      if (!this.isAuthenticated) {
-        this.loginButtonText = 'Logging in...'
 
-        try {
-          const userData = await signer.login()
-          this.loginButtonText = `Signed in as ${userData.address}`
-          this.isAuthenticated = true
-        } catch (error) {
-          this.loginButtonText = 'Login'
-        }
-      } else {
-        try {
-          await signer.logout()
-          this.isAuthenticated = false
-          this.loginButtonText = 'Login'
-        } catch (error) {
-          this.loginButtonText = 'Login'
-        }
-      }
+const loginButtonText = ref('Login')
+const isAuthenticated = ref(false)
+
+async function callSigner(){
+  if (isAuthenticated.value == false) {
+    loginButtonText.value = 'Logging in...'
+
+    try {
+      const userData = await signer.login()
+      loginButtonText.value = `Signed in as ${userData.address}`
+      isAuthenticated.value = true
+    } catch (error) {
+      loginButtonText.value = 'Login'
+    }
+  } else {
+    try {
+      await signer.logout()
+      isAuthenticated.value = false
+      loginButtonText.value = 'Login'
+    } catch (error) {
+      loginButtonText.value = 'Login'
     }
   }
 }
