@@ -75,14 +75,14 @@ async function callSigner(){
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #392cb8ff;
+  color: rgb(0, 0, 0);
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
   font-size: 42px;
-  color: #392cb8ff;
+  color: rgb(0, 0, 0);
   word-spacing: 5px;
   padding-bottom: 15px;
 }
@@ -94,19 +94,19 @@ async function callSigner(){
 a.signbutton {
   display: inline-block;
   padding: 0.35em 1.2em;
-  border: 0.1em solid #392cb8ff;
+  border: 0.1em solid rgb(0, 0, 0);
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: #392cb8ff;
+  color: rgb(0, 0, 0);
   text-align: center;
   transition: all 0.2s;
 }
 a.signbutton:hover {
   color: #000000;
-  background-color: rgba(58, 44, 184, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 </style>
