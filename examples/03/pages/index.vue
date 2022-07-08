@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div>
-      <logo />
       <h1 class="title">
         Decentralchain + Nuxt3
       </h1>
@@ -26,12 +25,17 @@
 import { ref } from 'vue'
 import { Signer } from '@decentralchain/signer'
 import { ProviderWeb } from '@waves.exchange/provider-web'
-const signer = new Signer({
+
+let signer
+let provider
+
+if (process.client) {
+  signer = new Signer({
   NODE_URL: 'https://mainnet-node.decentralchain.io'
 })
-const provider = new ProviderWeb('https://testnet.waves.exchange/signer/')
-signer.setProvider(provider)
-
+  provider = new ProviderWeb('https://testnet.waves.exchange/signer/')
+  signer.setProvider(provider)
+}
 
 const loginButtonText = ref('Login')
 const isAuthenticated = ref(false)
