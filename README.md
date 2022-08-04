@@ -1,8 +1,6 @@
-# Ride Examples
+![github_pages_workflow](https://github.com/jourlez/ride/actions/workflows/github_pages_workflow.yml/badge.svg)
 
-<p align="center">
-  <a href="https://"><img src="docs/_static/template.jpg?raw=true" alt="alt"/></a>
-</p>
+# Ride Examples
 
 ## Documentation
 
