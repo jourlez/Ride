@@ -10,7 +10,7 @@ User Requirements
 Install Ansible
 ===============
 
-Ansible will take care of setting your development envireonment, but for that you need to install Ansible first.
+Ansible will take care of setting your development environment, but for that you need to install Ansible first.
 
 ------
 Fedora
